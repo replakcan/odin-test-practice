@@ -80,7 +80,7 @@ test('ceaserCipher ciphers the word given according to shift factor', () => {
 })
 
 test('analyzeArray', () => {
-  const object = testSubjects.analyzeArray([1, 8, 3, 4, 2, 6])
-
-  expect(object).toEqual({ average: 4, min: 1, max: 8, length: 6 })
+  expect(testSubjects.analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({ average: 4, min: 1, max: 8, length: 6 })
+  expect(testSubjects.analyzeArray([7, 7, 7])).toEqual({ average: 7, min: 7, max: 7, length: 3 })
+  expect(testSubjects.analyzeArray([1, 5, 9, 21, 3241, 0, -1, -99])).toEqual({ average: 397.125, min: -99, max: 3241, length: 8 })
 })
